@@ -62,7 +62,7 @@ server.registerTool(
           const { resultUrls } = JSON.parse(data.resultJson);
           return resultUrls;
         },
-        { retries: 5, minTimeout: 1000, maxTimeout: 1000 },
+        { retries: 3, minTimeout: 10000, maxTimeout: 10000 },
       );
       return { content: [{ type: 'text', text: result }] };
     } catch (err) {
