@@ -1,13 +1,13 @@
 {
   "name": "kieai-mcp-server",
   "description": "MCP server for KIE AI",
-	"keywords": [
-		"MCP",
-		"Model Context Protocol"
-	],
+  "keywords": [
+    "MCP",
+    "Model Context Protocol"
+  ],
   "version": "0.1.0",
   "type": "module",
-	"license": "MIT",
+  "license": "MIT",
   "author": "Mars Wong",
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
@@ -16,7 +16,7 @@
   "files": [
     "dist"
   ],
-	"engines": {
+  "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
   "repository": {
@@ -30,8 +30,9 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.23.0",
     "p-retry": "7.1.0",
-		"ultimate-express": "2.0.12",
-		"zod": "4.1.13"
+    "ultimate-express": "2.0.10",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.52.0",
+    "zod": "4.1.13"
   },
   "devDependencies": {
     "@types/node": "24.10.1",
