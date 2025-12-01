@@ -2,7 +2,7 @@
 
 ## Usage
 
-Make sure to set up env `KIEAI_API_KEY` first.
+> Make sure to set up env `KIEAI_API_KEY` at your runtime
 
 Claude Code:
 ```sh
