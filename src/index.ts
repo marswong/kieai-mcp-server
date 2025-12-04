@@ -56,11 +56,11 @@ server.registerTool(
             headers,
           });
           const { code, message, data } = await res.json();
-          if (code !== 200) {
+          if (code !== 200 || data.state !== 'success') {
             throw new Error(message);
           }
           const { resultUrls } = JSON.parse(data.resultJson);
-          return resultUrls;
+          return Array.isArray(resultUrls) ? resultUrls[0] : resultUrls;
         },
         { retries: 3, minTimeout: 10000, maxTimeout: 10000 },
       );
