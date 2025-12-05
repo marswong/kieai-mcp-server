@@ -143,3 +143,5 @@ dist/
 
 # IDE
 .idea/
+
+.tsimp

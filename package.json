@@ -5,14 +5,27 @@
     "MCP",
     "Model Context Protocol"
   ],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "license": "MIT",
   "author": "Mars Wong",
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "ava"
   },
+  "ava": {
+    "nodeArguments": [
+      "--import=tsimp"
+		],
+    "environmentVariables": {
+      "TSIMP_DIAG": "ignore"
+    },
+    "extensions": {
+      "js": true,
+      "ts": "module"
+    }
+	},
   "files": [
     "dist"
   ],
@@ -35,7 +48,10 @@
     "zod": "4.1.13"
   },
   "devDependencies": {
+    "@ava/typescript": "6.0.0",
     "@types/node": "24.10.1",
+    "ava": "6.4.1",
+    "tsimp": "2.0.12",
     "typescript": "5.9.3"
   }
 }
