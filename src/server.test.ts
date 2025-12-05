@@ -21,7 +21,7 @@ test('text_to_image_flux_2_pro', async t => {
   const [clientTransport, serverTransport] = InMemoryTransport.createLinkedPair();
   await Promise.all([client.connect(clientTransport), server.connect(serverTransport)]);
 
-  t.timeout(30000);
+  t.timeout(60000);
   const result = await client.request<any>(
     {
       method: 'tools/call',
